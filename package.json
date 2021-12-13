@@ -1,0 +1,23 @@
+{
+  "name": "blog_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benji-Dev/Blog_node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benji-Dev/Blog_node/issues"
+  },
+  "homepage": "https://github.com/Benji-Dev/Blog_node#readme",
+  "dependencies": {
+    "fastify": "~3.24.1"
+  }
+}

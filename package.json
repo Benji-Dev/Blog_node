@@ -1,24 +1,28 @@
 {
-  "name": "blog_node",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Benji-Dev/Blog_node.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Benji-Dev/Blog_node/issues"
-  },
-  "homepage": "https://github.com/Benji-Dev/Blog_node#readme",
-  "dependencies": {
-    "@supabase/supabase-js": "~1.28.5",
-    "fastify": "~3.24.1"
-  }
+    "name": "blog_node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon routes/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Benji-Dev/Blog_node.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Benji-Dev/Blog_node/issues"
+    },
+    "homepage": "https://github.com/Benji-Dev/Blog_node#readme",
+    "dependencies": {
+        "@supabase/supabase-js": "~1.28.5",
+        "fastify": "~3.24.1"
+    },
+    "devDependencies": {
+        "nodemon": "~2.0.15"
+    }
 }

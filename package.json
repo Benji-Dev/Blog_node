@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Benji-Dev/Blog_node#readme",
   "dependencies": {
+    "@supabase/supabase-js": "~1.28.5",
     "fastify": "~3.24.1"
   }
 }

@@ -4,7 +4,7 @@ const fastify = require('fastify')
 const app = fastify()
     // Set a GET route "/"
 app.get('/', function(request, reply) {
-        reply.send("test route")
+        reply.send("test route test 2")
     })
     // Start the server
 app.listen(3000, function(err, address) {

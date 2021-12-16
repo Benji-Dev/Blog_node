@@ -1,16 +1,47 @@
-// index.js
-// Import the fastify framework
-const fastify = require('fastify')
-const app = fastify()
-    // Set a GET route "/"
-app.get('/', function(request, reply) {
-        reply.send("test route test 3")
+/**
+ * @type { import('fastify').FastifyPluginCallback }
+ */
+export async function routes(app) {
+    app.get('/', (request, reply) => {
+        reply.send({ message: 'Server is running' })
     })
-    // Start the server
-app.listen(3000, function(err, address) {
-    if (err) {
-        console.error(err)
-        process.exit(1)
-    }
-    console.log(`Server listening on ${address}`)
-})
+
+    app.get(
+        '/hello', {
+            schema: {
+                querystring: {
+                    type: 'object',
+                    properties: {
+                        name: { type: 'string' },
+                    },
+                    additionalProperties: false,
+                },
+            },
+        },
+        (request, reply) => {
+            reply.send({ message: `Hello ${request.query.name || 'world'}` })
+        },
+    )
+
+    app.post(
+        '/message', {
+            schema: {
+                body: {
+                    type: 'object',
+                    properties: {
+                        random: { type: 'string' },
+                        message: { type: 'string' },
+                    },
+                    required: ['message'],
+                    additionalProperties: false,
+                },
+            },
+        },
+        (req, reply) => {
+            reply.send({
+                message: 'Message received',
+                data: req.body,
+            })
+        },
+    )
+}

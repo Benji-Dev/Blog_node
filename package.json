@@ -2,10 +2,10 @@
     "name": "blog_node",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon routes/index.js"
+        "dev": "nodemon routes/server.js"
     },
     "repository": {
         "type": "git",
